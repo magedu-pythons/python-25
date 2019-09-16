@@ -1,0 +1,25 @@
+第一种解法
+a = 0
+b = 1
+while True:
+    c = a + b
+    if c > 100:
+        break
+    a = b
+    b = c
+    print(c)
+	
+	
+第二种解法：
+lst = []
+a = 0
+b = 1
+while True:
+    c = a + b
+    a = b
+    b = c
+    if c < 100:
+        lst.append(c)
+    else:
+        break
+print(lst)
