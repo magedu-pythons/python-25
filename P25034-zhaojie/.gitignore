@@ -1,0 +1,7 @@
+# ignore test files
+test.*
+
+# ignore pycharm and python files
+.idea/
+__pycache__/
+*.py[cod]
