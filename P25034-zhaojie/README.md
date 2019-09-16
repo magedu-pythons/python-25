@@ -1,3 +1,10 @@
 ## Python-25 Homework
 
-25034-zhaojie
+P25034-zhaojie
+
+#### week-01
+
+done.
+
+#### week-02
+
