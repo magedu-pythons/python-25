@@ -1,0 +1,5 @@
+lst = [1,2,3,4,5,6,7,8,9,0,'z','y','x','w','v','u','t','s','r','q','p','o','n','m','l','k','j','i','h','g','f','e','d','c','b','a']
+for i in range(200):
+    a = []
+    a += random.sample(lst,6)
+    print(a)
