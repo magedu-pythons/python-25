@@ -5,13 +5,13 @@
 #1 使用while循环
 s1 = 1
 s2 = 1
-print(s1)
-print(s2)
+print(s1,end=' ')
+print(s2,end=' ')
 while True:
     s3 = s1 + s2
     if s3 > 100:
         break
-    print(s3)
+    print(s3,end=' ')
     s1 = s2
     s2 = s3
 
