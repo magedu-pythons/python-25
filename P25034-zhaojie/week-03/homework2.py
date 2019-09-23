@@ -31,5 +31,9 @@ def wc2(fn):
 
 wc('sample.txt')
 wc('sample2.txt')
+
 wc2('sample.txt')
 wc2('sample2.txt')
+
+wc('sample3.txt')
+wc2('sample3.txt')
