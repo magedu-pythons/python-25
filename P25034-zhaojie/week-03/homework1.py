@@ -3,6 +3,7 @@
 # file: homework1.py
 
 # 列表中找元素
+# TODO 用哈希表实现
 
 
 def find1(lst, elem):
