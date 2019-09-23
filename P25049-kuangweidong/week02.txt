@@ -1,0 +1,37 @@
+#1、100以内的斐波那契数列（方法一）
+print(0)
+print(1)
+a=0
+b=1
+while True:
+	c=a+b
+	if c>100:break
+	a=b
+	b=c
+	print(c)
+#100以内的斐波那契数列（方法二）
+
+pre=0
+cur=1
+print(pre,cur,end=' ')
+
+while True:
+	pre,cur=cur,pre+cur
+	if cur >=100:break
+	print(cur,end=', ')
+
+#2、使用 Python 实现随机生成 200 无重复激活码（或者优惠券），字符串长度大于5以上.
+import random
+count=0#计数
+s='abcdefghigklmnopqrstuvwxyz0123456789'
+while True:#准备打印200个激活码
+    count += 1
+    jhm=''
+    for i in range(6):
+        jhm+=random.choice(s)
+    print('Number:',count,'，激活码：',jhm)
+    if count>=200:break
+
+
+
+
