@@ -1,4 +1,9 @@
 ﻿# 任一个英文的纯文本文件，统计其中的单词出现的个数 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6d0b53cee619b59a89ca51e52ea83ee4cf0d971a
 def word_counts(file, word):
     '''
     :param file: 要搜索的文本文件
