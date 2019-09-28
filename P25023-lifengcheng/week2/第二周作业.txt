@@ -1,0 +1,48 @@
+1、略
+
+2、打印出100以内的斐波那契数列，使用2种方法实现
+方法一：
+#打印出100以内的斐波那契额数列
+
+n = 10
+sum = 0
+fist = 1
+sec = 1
+for i in range(n):
+    sum = fist + sec
+    fist = sec
+    sec = sum
+    print(sum) 
+
+方法二：
+
+n = 0
+sum = 0
+fist = 1
+sec = 1
+while n <= 100:
+    sum = fist + sec
+    fist = sec
+    sec = sum
+    n +=1
+    print(sum)
+
+3、使用 Python 实现随机生成 200 无重复激活码（或者优惠券），字符串长度大于5以上
+方法一：
+
+lst = []
+for _ in range(200):
+    a = ''.join(random.sample('zyxwvutsrqponmlkjihgfedcba',6))
+    if a in lst:
+        continue
+    else:
+        lst.append(a)
+print(lst)
+
+方法二：
+
+setl = set()
+while len(setl) <= 200:
+    a = ''.join(random.sample('zyxwvutsrqponmlkjihgfedcba',6))
+    setl.add(a)
+print(setl)

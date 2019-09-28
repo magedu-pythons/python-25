@@ -1,0 +1,54 @@
+第二周作业：宝宝们作业雷打不动的来了呀（9.16-9.22）
+1、搭建好pytenv环境，理解local、global、shell3种方式区别，安装部署完成jupyter并运行
+http://note.youdao.com/noteshare?id=ff6691911707d32cf5b3aadf87e2345d
+http://note.youdao.com/noteshare?id=48253409d9e7bce52d9821627787a227
+
+2、打印出100以内的斐波那契数列，使用2种方法实现
+第一种
+a = 1
+b = 1
+c = 0
+i = 1
+while i>=1:
+    if i < 3:
+        print(a)
+        i += 1
+    elif i > 3 and i < 100:
+        c = a + b
+        print(c)
+        a = b
+        b = c
+        i += 1
+	else:
+		break
+第二种
+a = 1
+b = 1
+c = 0
+i = 1
+for i in range(101):
+    if i < 3:
+        print(a)
+    else:
+        c = a + b
+        print(c)
+        a = b
+        b = c
+	
+3、使用 Python 实现随机生成 200 无重复激活码（或者优惠券），字符串长度大于5以上
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

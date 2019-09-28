@@ -1,0 +1,6 @@
+test num 1234, 123.1 a1c2. --all
+
+test Alpha ALPHA aLPHa.
+test punctuation, abc , 123, 123 .
+test other chars ! amazing! +-= =/= a1== word=/+-
+test () (ab cd) (abcd) ( ac )
