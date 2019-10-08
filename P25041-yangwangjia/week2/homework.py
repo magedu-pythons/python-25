@@ -40,7 +40,8 @@ a=0
 b=1
 i=2
 print("fib 0 = 0")
-print("fib 1 = 1")
+
+print("fib 1 = 1")
 while True:
     c=a+b
     
@@ -60,3 +61,11 @@ while True:
 使用 Python 实现随机生成 200 无重复激活码（或者优惠券），字符串长度大于5以上
 
 """
+
+
+import uuid
+l_t=[]
+for i in range(200):
+    token=uuid.uuid4()
+    l_t.append(str(token))
+print(l_t)
