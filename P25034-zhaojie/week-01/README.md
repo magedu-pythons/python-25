@@ -10,3 +10,4 @@
 1. Join python 25 magedu organization.  
 2. Create own homework directory.  
 3. Git push to organization.  
+4. ALL DONE.
