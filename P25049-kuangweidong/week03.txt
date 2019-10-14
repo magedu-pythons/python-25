@@ -1,0 +1,11 @@
+#1、给出任意一个列表，请查找出x元素是否在列表里面，如果存在返回1，不存在返回0
+a='python is very good'
+print('1') if ('x' in a ) else print('0')
+
+2、任一个英文的纯文本文件，统计其中的单词出现的个数。
+a='python is very good'
+lst=a.split()
+print(lst)
+
+for i in range(len(lst)):
+    print('单词是：',lst[i],'    个数是：',lst.count(lst[i]))
