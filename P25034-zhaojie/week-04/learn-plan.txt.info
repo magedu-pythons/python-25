@@ -1,0 +1,3 @@
+pubkey fingerprint: E03B 986F 101D CB0B 7351  34FE 6DF9 7615 65A4 EC1A
+encrypt cmd: gpg -r jasonz666 -e --armor learn-plan.txt (encrypt to learn-plan.txt.asc)
+decrypt cmd: gpg -o learn-plan.txt -d learn-plan.txt.asc (restore to learn-plan.txt)
