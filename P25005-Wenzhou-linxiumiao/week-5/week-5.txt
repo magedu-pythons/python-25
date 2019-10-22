@@ -1,0 +1,16 @@
+import random
+
+alist = [1,2,3,4,5]
+l = len(alist)
+a = random.sample(alist,k=l)
+print(a)
+
+d = {'袜子':10,'鞋子':20,'拖鞋':30,'项链':40}
+
+def return_proportional(d:dict):
+    lis = []
+    for k,v in d.items():
+        for i in range(v):
+            lis.append(k)
+    return random.choice(lis)
+print(return_proportional(d)) 
