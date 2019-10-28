@@ -20,7 +20,7 @@ def fib_seq1(max_num):
     print()
 
 
-def pnt_fib(max_num):
+def pnt_fib():
     def fib_seq2(num_idx):
         """方法2：使用递归
         """
@@ -48,5 +48,5 @@ def fib_seq3(max_num):
 if __name__ == '__main__':
     max_fib = 100
     fib_seq1(max_fib)
-    pnt_fib(max_fib)
+    pnt_fib()
     fib_seq3(max_fib)

@@ -1,0 +1,38 @@
+#函数
+##可变参数
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+
+calc(1,2,2)	
+
+##关键字参数
+def person(name ,age,**kw):
+    print('name:',name ,'age:',age,'other:',kw)
+
+person('jim',1,city='bj')
+
+extra={'city':"bj",'tel':'1311101111'}
+person('jim',10,**extra)
+
+##命名关键字参数
+def person(name, age, **kw):
+    if 'city' in kw:
+        # 有city参数
+        pass
+    if 'job' in kw:
+        # 有job参数
+        pass
+    print('name:', name, 'age:', age, 'other:', kw)
+
+##命名关键字参数，限制关键字参数名字
+def person(name,age,*,city,job):
+    print(name,age,city,job)
+
+person('jim',8,city='bj',job='dba')	
+
+##给了默认值就可以不传
+def person(name, age, *, city='Beijing', job):
+    print(name, age, city, job)

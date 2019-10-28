@@ -20,6 +20,6 @@ for i in range(rnd_count):
 
 # 使用 random.sample
 print('--------')
-for i in range(rnd_count):
+for j in range(rnd_count):
     new_str = ''.join(random.sample(tmp_str, k=8))
     print(new_str)
