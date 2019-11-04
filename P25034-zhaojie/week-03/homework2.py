@@ -8,7 +8,7 @@
 def wc(fn):
     """方法1：以空格分隔的连续字符串为单词
     """
-    with open(fn, 'r') as fd:
+    with open(fn, 'r', encoding='utf-8') as fd:
         words = fd.read().split()
         print(len(words))
 
@@ -18,7 +18,7 @@ def wc2(fn):
     """
     word_count = 0
     word_flag = 0
-    with open(fn, 'r') as fd:
+    with open(fn, 'r', encoding='utf-8') as fd:
         chars = fd.read()
         for i in chars:
             if i not in (' ', '\t', '\n') and word_flag == 0:

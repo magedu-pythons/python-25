@@ -1,0 +1,22 @@
+1、打乱一个排好序的list对象alist，alist=[1,2,3,4,5]
+alist=[1,2,3,4,5]
+x=int(input('input num1不能被5整除的正整数: '))
+#y=int(input('input num2: '))
+blist=[]
+#x=38
+y=5
+for i in range(len(alist)):
+    blist.append(alist[i]*x%y+1)
+alist=blist
+for i in range(len(alist)):
+    print(alist[i])
+
+
+2、已知仓库中有若干商品，以及相应库存，类似：
+袜子，10
+鞋子，20
+拖鞋，30
+项链，40
+要求随机返回一种商品，要求商品被返回的概率与其库存成正比。请描述实现的思路或者直接写一个实现的函数 
+
+实现思路：按库存生成一个list，打乱list中元素顺序，按索引取list值。
