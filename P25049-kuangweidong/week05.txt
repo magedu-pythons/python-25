@@ -24,4 +24,4 @@ dict1={'wazi':dict.get('wazi')/sum,'xiezi':dict.get('xiezi')/sum,'tuoxie':dict.g
 print(dict1)#{'wazi': 0.1, 'xiezi': 0.2, 'tuoxie': 0.3, 'xianlian': 0.4}
 #如上生成一个新字典，商品和其概率
 
-问题：如何将其按其概率输出？
+问题：：如何将其按其概率输出？
