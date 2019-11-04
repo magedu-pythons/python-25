@@ -16,7 +16,7 @@ lst=dict.keys()
 print(lst)
 
 sum=0
-for x in dict.values():#遍历值
+for x in dict.values():#遍历
 	sum=sum+x
 print(sum)
 
