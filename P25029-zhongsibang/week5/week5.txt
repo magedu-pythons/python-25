@@ -1,0 +1,52 @@
+#1、打乱一个排好序的list对象alist，alist=[1,2,3,4,5]
+
+import random
+alist = [1,2,3,4,5]
+random.sample(alist,len(alist))
+
+
+
+#2、已知仓库中有若干商品，以及相应库存，类似：
+#袜子，10
+#鞋子，20
+#拖鞋，30
+#项链，40
+#要求随机返回一种商品，要求商品被返回的概率与其库存成正比。请描述实现的思路或者直接写一个实现的函数 
+
+
+#袜子 a
+#鞋子 b
+#拖鞋 c
+#项链 d
+import random
+a = 10
+b = 20
+c = 30
+d = 40
+
+lst = ['a'] * a + ['b'] * b + ['c'] * c + ['d'] * d
+#print(lst)
+
+#测试概率,随机取20000次
+aa = 0
+bb = 0
+cc = 0
+dd = 0
+count =0
+for _ in range(20000):
+    n = random.choice(lst)
+    if n =='a':
+        aa += 1
+    if n == 'b':
+        bb += 1
+    if n == 'c':
+        cc += 1
+    if n == 'd':
+        dd += 1
+    count +=1
+print("'a'_{}_{:.1f}%".format(aa,100 * aa / count))
+print("'b'_{}_{:.1f}%".format(bb,100 * bb / count))
+print("'c'_{}_{:.1f}%".format(cc,100 * cc / count))
+print("'d'_{}_{:.1f}%".format(dd,100 * dd / count))
+
+
