@@ -25,3 +25,17 @@ b = '1,23,45,678'
 c = '1, 23, 4, 5'
 该怎么遍历呢？可以尝试迭代一下。
 """
+
+# 优化版，能处理空格等，只用一个循环
+a = ',1,23,   456 , ab  c,,,'
+sep = '\t ,'
+tmp_str = ''
+result = []
+for i in a:
+    if i in sep:
+        if tmp_str:
+            result.append(tmp_str)
+        tmp_str = ''
+        continue
+    tmp_str += i
+print(result)
