@@ -1,0 +1,14 @@
+#给出任意一个列表，请查找出x元素是否在列表里面，如果存在返回1，不存在返回0
+
+lst = [1,2,3,4,5,6,5,4,3,2,1,'a']
+contant = False
+lst_new = '@'.join(map(str,lst)).split('@')  #将列表元素转换为str,防止查找出错
+x = input('Search Index>>>')
+for i in range(len(lst_new)):
+    if lst_new[i]==x:
+        print(x,'is in list ,index:',i)
+        contant = True
+if contant == False:
+    print(x,'is not in list !!!!')
+print(lst)
+print(lst_new)

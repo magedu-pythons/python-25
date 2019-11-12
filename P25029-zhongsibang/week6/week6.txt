@@ -1,0 +1,24 @@
+#1、现有两元祖 (('a'),('b')),(('c'),('d')) ,
+#请使用Python中的匿名函数生成列表 [ {'a':'c'｝,{'b':'d'}]
+
+tuple1 = (('a'),('b')),(('c'),('d'))
+(lambda arg : [ {j for j in i} for i in arg])(tuple1)
+
+
+
+
+
+
+
+
+
+#2、输入一个英文句子,翻转句子中的单词顺序,但单词内字符的顺序不变 
+text = "If one positional argument is provided, it should be an iterable. The smallest item in the iterable is returned. "
+
+
+def reverse(texts):
+    words = [ i.strip('.,') for i in texts.split()]
+    words.reverse()
+    return words
+
+reverse(text)
