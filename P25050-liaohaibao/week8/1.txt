@@ -1,0 +1,31 @@
+# 1、实现一个函数用于判断字符串str2是否是str1的子串。如果是，则该函数返回str2在str1中首次出 现的地址；否则，返回None。
+# 方法一 自建函数
+def strFind(s1:str,s2:str):
+    len1 = len(s1)
+    len2 = len(s2)
+    i = 0
+    while True:
+        if s2 == s1[i:i+len2]:
+            print('s2出现在s1的{0}开始地址'.format(i))
+            return i
+        elif i + len2 > len1:
+            print('s2不存在s1中')
+            return None
+        i += 1
+
+s1 = "abcdefghi"
+s2 = "defg"
+print(strFind(s1,s2))
+s2 = "fgx"
+print(strFind(s1,s2))
+print('~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
+
+# 方法二 使用Python标准函数
+s1 = "abcdefghi"
+s2 = "defg"
+value = s1.rfind(s2)
+print(value if value >= 0 else None )
+
+s2 = "fgx"
+value = s1.rfind(s2)
+print(value if value >= 0 else None )
