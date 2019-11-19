@@ -1,0 +1,24 @@
+# 2. 给出两个列表list1 = [1, 2, 3, 4, 5], list2=[3,4,7,8,9]，找出列表中相同和不同的元素，使用两种（包含两种）以上方法实现。
+list1 = [1,2,3,4,5]
+list2 = [3,4,7,8,9]
+# 方法一
+set1 = set(list1)
+set2 = set(list2)
+same = set1 & set2
+dif = set1 ^ set2
+print(same)
+print(dif)
+
+# 方法二
+same = []
+dif = []
+for i in list1:
+    if i in list2:
+        same += [i]
+    else:
+        dif += [i]
+for i in list2:
+    if i not in list1:
+        dif += [i]
+print(same)
+print(dif)

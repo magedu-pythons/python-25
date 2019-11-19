@@ -1,0 +1,25 @@
+# 1. 字符串 str= 'reverse this string'， 请使用三种方法翻转字符串。
+oldstr = 'reverse this string'
+# 方法一
+newstr = ''
+for i in oldstr:
+    newstr = i + newstr
+print(newstr)
+
+# 方法二
+newstr = ''
+i = len(oldstr)-1
+while i > -1:
+    newstr += oldstr[i]
+    i -= 1
+print(newstr)
+
+# 方法三
+newstr = oldstr[::-1]
+print(newstr)
+
+# 方法四
+lis = list(oldstr)
+lis.reverse()
+newstr = ''.join(lis)
+print(newstr)
