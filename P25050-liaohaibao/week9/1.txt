@@ -1,4 +1,5 @@
 # 1. 字符串 str= 'reverse this string'， 请使用三种方法翻转字符串。
+
 oldstr = 'reverse this string'
 # 方法一
 newstr = ''
