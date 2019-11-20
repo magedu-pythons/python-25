@@ -40,11 +40,8 @@ for i in range(l1_len):
         # list1的交集元素起点
         start = i
         for j in range(l2_len):
-            if start + j < l1_len and list1[start + j] != list2[j]:
+            if start + j >= l1_len or list1[start + j] != list2[j]:
                 # list2的交集元素终点+1
-                end = j
-                break
-            elif start + j >= l1_len:
                 end = j
                 break
         break
