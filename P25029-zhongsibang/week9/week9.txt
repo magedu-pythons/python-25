@@ -1,0 +1,83 @@
+﻿#1. 字符串 str= 'reverse this string'， 请使用三种方法翻转字符串。
+#方法一
+str= 'reverse this string'
+def reverse(str:str):
+    newlst = []
+    for i in range(len(str)-1,-1,-1):
+        newlst.append(str[i])
+    return ''.join(newlst)
+    
+reverse(str)
+
+#方法二
+str= 'reverse this string'
+def reverse(str:str):
+    length = len(str)
+    strdic = {}
+    restr = ''
+    for i,x in enumerate(str):
+        strdic[i]=x
+    for i in range(length-1,-1,-1):
+        restr += strdic[i]
+    return restr
+    
+reverse(str)
+
+#方法三
+str= 'reverse this string'
+def reverse(str:str):
+    length = len(str)
+    lst = list(str)
+    newstr = ''
+    #print(length)
+    for i in range(int(length/2)):
+        lst[i],lst[length-i-1] = lst[length-i-1],lst[i]
+    for x in lst:
+        newstr += x
+    return newstr
+
+        
+reverse(str)
+
+
+
+
+#2. 给出两个列表list1 = [1, 2, 3, 4, 5], list2=[3,4,7,8,9]，找出列表中相同和不同的元素，使用两种（包含两种）以上方法实现。
+#方法一
+list1 = [1, 2, 3, 4, 5]
+list2=[3,4,7,8,9]
+def find(lst1:list,lst2:list):
+    set1 = set(lst1)
+    set2 = set(lst2)
+    print(set1&set2)
+    print(set1^set2)
+find(list1,list2)
+
+#方法二
+list1 = [1, 2, 3, 4, 5]
+list2=[3,4,7,8,9]
+
+def lstadd(lst:list,str:str):
+    if str not in lst:
+        return lst.append(str)
+    else:
+        return lst
+
+def find(lst1:list,lst2:list):
+    sam = []
+    dif = []
+    for i in lst1:
+        for j in lst2:
+            if i==j:
+                lstadd(sam,i)
+    for i in lst1:
+        if i not in sam:
+            lstadd(dif,i)
+    for j in lst2:
+        if j not in sam:
+            lstadd(dif,j)
+    print(sam,dif)
+
+find(list1,list2)
+
+
