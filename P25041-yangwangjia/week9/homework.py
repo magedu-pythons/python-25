@@ -18,7 +18,7 @@ def fun3(tmp):
     tmp = [i for i in tmp]
     tmp.reverse()
     return tmp
-
+# 第二种和第三种方法别忘了把列表里的字符拼接了返回.
 
 # 测试函数
 
@@ -53,3 +53,5 @@ def fun2(lst1,lst2):
 
 # fun1(list1,list2)
 # fun2(list1,list2)
+
+#第二种方法的思路是对的,但是具体的实现错了, 一次循环是没法找出两个列表里的不同元素的,可以再尝试一下.
