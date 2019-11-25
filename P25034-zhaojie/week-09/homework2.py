@@ -47,3 +47,5 @@ for i in range(l1_len):
         break
 print(list1[start:start + end])
 print(list1[:start] + list1[start + end:] + list2[end:])
+
+# 不错,对集合和列表的概念已经掌握的很扎实了.
