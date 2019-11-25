@@ -1,0 +1,42 @@
+class String:
+def __init__(self,string):
+self.string = string
+self.list = list(string)
+
+def __len__(self):
+return len(self.string)
+
+def __reverse__(self):
+list1 = ''
+for x in range(self.__len__()-1,-1,-1):
+list1 += self.string[x]
+return list1
+
+def __index__(self,v):
+return self.list[v]
+
+def __upper__(self):
+list1 = ''
+for x in self.list:
+if 123 > ord(x) > 97:
+x = chr(ord(x) - 32)
+list1 += x
+return list1
+
+def __lower__(self):
+list1 = ''
+for x in self.list:
+if 91 > ord(x) > 64:
+x = chr(ord(x) + 32)
+list1 += x
+return list1
+
+def __find__(self,v):
+list1 = []
+for x in range(self.__len__()):
+if self.list[x] == v :
+list1.append(x)
+return '位置{} 次数{}'.format(list1,len(list1))
+
+a = String('Ab c')
+print(a.__find__('b'))
