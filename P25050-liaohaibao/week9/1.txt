@@ -1,13 +1,13 @@
-# 1. ×Ö·û´® str= 'reverse this string'£¬ ÇëÊ¹ÓÃÈıÖÖ·½·¨·­×ª×Ö·û´®¡£
+# 1. å­—ç¬¦ä¸² str= 'reverse this string'ï¼Œ è¯·ä½¿ç”¨ä¸‰ç§æ–¹æ³•ç¿»è½¬å­—ç¬¦ä¸²ã€‚
 
 oldstr = 'reverse this string'
-# ·½·¨Ò»
+# æ–¹æ³•ä¸€
 newstr = ''
 for i in oldstr:
     newstr = i + newstr
 print(newstr)
 
-# ·½·¨¶ş
+# æ–¹æ³•äºŒ
 newstr = ''
 i = len(oldstr)-1
 while i > -1:
@@ -15,12 +15,14 @@ while i > -1:
     i -= 1
 print(newstr)
 
-# ·½·¨Èı
+# æ–¹æ³•ä¸‰
 newstr = oldstr[::-1]
 print(newstr)
 
-# ·½·¨ËÄ
+# æ–¹æ³•å››
 lis = list(oldstr)
 lis.reverse()
 newstr = ''.join(lis)
 print(newstr)
+
+# ä¸é”™,å‡ ç§æ–¹æ³•éƒ½å¾ˆæœ‰åˆ›æ„, pythonè¿˜æœ‰ä¸€ä¸ªè‡ªå¸¦çš„reversedæ–¹æ³•.å¯ä»¥å»å°è¯•ä¸€ä¸‹.
