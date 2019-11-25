@@ -12,19 +12,18 @@ def fun1(tmp):
     return tmp[::-1]
 
 def fun2(tmp):
-    return [i for i in reversed(tmp)]
+    return ''.join(map(str,[i for i in reversed(tmp)]))
 
 def fun3(tmp):
     tmp = [i for i in tmp]
     tmp.reverse()
-    return tmp
-# 第二种和第三种方法别忘了把列表里的字符拼接了返回.
+    return ''.join(map(str,tmp))
+
 
 # 测试函数
-
-# fun1(temp)
-# fun2(temp)
-# fun3(temp)
+print(fun1(temp))
+print(fun2(temp))
+print(fun3(temp))
 
 
 """
@@ -33,8 +32,11 @@ def fun3(tmp):
     找出列表中相同和不同的元素，使用两种（包含两种）以上方法实现。
 
 思路：
-    set集合的in操作
-    for循环遍历操作
+    方法一：
+        set集合的并和差运算操作，找出相同和不同元素，
+    方法二：
+        for循环遍历操作，找出相同元素
+        
 
 """
 
@@ -42,16 +44,37 @@ list1 = [1, 2, 3, 4, 5]
 list2 = [3, 4, 7, 8, 9]
 
 def fun1(lst1,lst2):
-    temp = {i for i in lst2}
-    return [i for i in lst1 if i in temp]
+    
+    temp1 = {i for i in lst1}
+    temp2 = {i for i in lst2}
+    
+    newList = temp1 | temp2
+    theSame = temp1 & temp2
+    difference = newList - theSame
+    return theSame,difference
 
 def fun2(lst1,lst2):
-    return [i for i in lst1 if i in lst2]
+    
+    theSame=[]
+    difference=[]
+    
+    for i in range(len(lst1)):
+        flag = False
+        for j in range(len(lst2)):
+            if lst1[i] == lst2[j]:
+                theSame.append(lst1[i])
+                flag = True
+        if not flag:
+            difference.append(lst1[i])
+
+    for i in lst2:
+        if i not in theSame:
+            difference.append(i)
+            
+    return theSame,difference
 
 
 # 测试函数
 
-# fun1(list1,list2)
-# fun2(list1,list2)
-
-#第二种方法的思路是对的,但是具体的实现错了, 一次循环是没法找出两个列表里的不同元素的,可以再尝试一下.
+print(fun1(list1,list2))
+print(fun2(list1,list2))
