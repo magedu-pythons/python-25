@@ -1,0 +1,21 @@
+'''
+2、已知仓库中有若干商品，以及相应库存，类似：
+袜子，10
+鞋子，20
+拖鞋，30
+项链，40
+要求随机返回一种商品，要求商品被返回的概率与其库存成正比。请描述实现的思路或者直接写一个实现的函数
+'''
+import random
+itemDict = {"袜子":10,"鞋子":20,"拖鞋":30,"项链":40}
+itemList = []
+total = 0
+for k,v in itemDict.items(): #各商品按库存数量拆成N项，并保存到列表中
+   itemList += [k]*v
+   total += v
+
+itemName = random.choice(itemList) #随机选择一个值
+inventQty = itemDict[itemName]    #获取库存数量
+percent =  inventQty / total      # 当前商品数据与总库存的比值
+
+print('商品[{}] 库存[{}] 随机选择的概率[{}]'.format(itemName,inventQty,percent))

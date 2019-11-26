@@ -1,0 +1,20 @@
+# 1¡¢Çë½« "1,2,3"£¬±ä³É ["1","2","3"]
+s = "1,2,3"
+l = s.split(',')
+print(l)
+
+'''
+#list to str
+l = ['15','2','3']
+s = ''.join(l)
+print(type(s),s)
+
+l = [15,2,3,'6',(2,3),{'a':"123456"}]
+s = ''.join([str(x) for x in l])
+print(type(s),s)
+
+#str to list
+s = '12345(1,2)'
+l = list(s)
+print(l)
+'''
