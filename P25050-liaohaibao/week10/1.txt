@@ -57,4 +57,3 @@ print('index :{}'.format(strcls.index('45E')))
 print('upper :{}'.format(strcls.upper()))
 print('lower :{}'.format(strcls.lower()))
 print('find :{}'.format(strcls.find('EF')))
-
