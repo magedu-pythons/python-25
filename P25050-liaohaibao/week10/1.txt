@@ -1,6 +1,7 @@
 # 不使用系统函数，自己实现一个string类，实现基本的字符串翻转reverse，
 # 索引 index，大写upper，小写lower，查找find等功能。
 
+
 class string:
     def __init__(self,strvalue:str):
         self.strvalue = strvalue
