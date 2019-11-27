@@ -1,0 +1,60 @@
+# 不使用系统函数，自己实现一个string类，实现基本的字符串翻转reverse，
+# 索引 index，大写upper，小写lower，查找find等功能。
+
+class string:
+    def __init__(self,strvalue:str):
+        self.strvalue = strvalue
+
+    def __repr__(self):
+        return self.strvalue
+
+    # 字符串翻转
+    def reverse(self):
+        return self.strvalue[::-1]
+        # return ''.join(reversed(self.strvalue))
+
+    #  索引
+    def index(self,k,start=0,end=0):
+        end = end if end > 0 else len(self.strvalue)
+        for i in range(start, end):
+            if k == self.strvalue[i:i + len(k)]:
+                return i
+        else:
+            return -1
+        # return self.strvalue.index()
+
+    # 大写
+    def upper(self):
+        newstr = ''
+        for i in self.strvalue:
+            newstr += chr(ord(i)-32) if ord(i) >= 97 and ord(i) <= 122 else i
+        return newstr;
+        # return self.strvalue.upper()
+
+    # 小写
+    def lower(self):
+        newstr = ''
+        for i in self.strvalue:
+            newstr += chr(ord(i) + 32) if ord(i) >= 65 and ord(i) <= 90 else i
+        return newstr;
+        # return self.strvalue.lower()
+
+    # 查找
+    def find(self,k,start=0,end=0):
+        end = end if end > 0 else len(self.strvalue)
+        for i in range(start,end):
+            if k == self.strvalue[i:i+len(k)]:
+                return i
+        else:
+            return -1
+        # return self.strvalue.find(k,start,end)
+
+value = 'abcd12345EFGH'
+strcls = string(value)
+print('string  :{}'.format(strcls))
+print('reverse :{}'.format(strcls.reverse()))
+print('index :{}'.format(strcls.index('45E')))
+print('upper :{}'.format(strcls.upper()))
+print('lower :{}'.format(strcls.lower()))
+print('find :{}'.format(strcls.find('EF')))
+
