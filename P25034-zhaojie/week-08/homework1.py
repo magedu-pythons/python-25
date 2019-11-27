@@ -14,7 +14,7 @@ def str_search(s, sub):
     pos = None
     for i in range(len_s):
         for j in range(len_sub):
-            if sub[j] != s[i + j]:
+            if i + j >= len_s or sub[j] != s[i + j]:
                 break
         else:
             # 子字符串不为空则对应for循环已正常迭代完毕
@@ -25,7 +25,11 @@ def str_search(s, sub):
 
 # 方法2：使用内置方法
 def str_search2(s, p):
-    return s.find(p)
+    idx = s.find(p)
+    if idx == -1:
+        return None
+    else:
+        return idx
 
 
 # 其他高效算法
@@ -33,6 +37,6 @@ def str_search2(s, p):
 
 if __name__ == '__main__':
     tmp_s = 'abcav123av.56, 24avx'
-    tmp_p = '23'
+    tmp_p = 'xv'
     print(str_search(tmp_s, tmp_p))
     print(str_search2(tmp_s, tmp_p))
