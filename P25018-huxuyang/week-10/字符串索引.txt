@@ -1,0 +1,7 @@
+string = "abcdefg"
+lst = []
+#lenth = len(lst)
+for i in string:
+    lst.append(i)
+for a,b in enumerate(lst):
+    print(a,b)

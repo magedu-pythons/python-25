@@ -1,0 +1,9 @@
+r = input("ÇëÊäÈëÒ»¸ö×ÖÄ¸")
+string = "abcdefg"
+lst = []
+for i in string:
+    lst.append(i)
+if r in lst:
+    print("right")
+else:
+    print("false")
