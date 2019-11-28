@@ -1,0 +1,14 @@
+#1、打乱一个排好序的list对象alist，alist=[1,2,3,4,5]
+def disturbList(lis:list):
+   import random
+   newList = []
+   for i in random.sample(range(0, len(alist)), len(alist)):
+      newList.append(alist[i])
+   return newList
+
+alist = [1,2,3,4,5]
+print(disturbList(alist))
+
+# 方法二
+alist = [1,2,3,4,5]
+print(random.sample(alist,len(alist)))

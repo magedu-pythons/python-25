@@ -1,0 +1,23 @@
+#实现随机生成200个无重复激活码，字符串长度大于5
+
+
+import random
+
+#定义激活码组成元素，a-z,A-Z,0-9
+pool = []  
+for i in range(ord('a'),ord('z')+1):
+    pool.append(chr(i))
+for i in range(ord('A'),ord('Z')+1):
+    pool.append(chr(i))
+pool.extend(range(10))
+ran_num_pool = []
+
+#生成200个激活码
+for i in range(200):       
+    ran_num_len = random.choice(range(6,13))  #随机定义激活码长度为6-12之间
+    ran_num =''
+    for j in range(ran_num_len):            #生成随机指定长度的激活码
+        ran_num += str(random.choice(pool))
+    ran_num_pool.append(ran_num)            #将激活码添加至密码池
+print(len(ran_num_pool))
+print(ran_num_pool)

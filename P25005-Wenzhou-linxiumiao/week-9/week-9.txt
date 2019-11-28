@@ -1,0 +1,58 @@
+str1 = 'reverse this string'
+str2 = ''
+for x in range(len(str1)-1,-1,-1):
+y = str1[x]
+str2 += y
+print(str2)
+
+str2 = ''
+for x in reversed(str1):
+str2 += x
+print(str2)
+
+dict2 = {}
+str2 = ''
+for i,v in enumerate(str1):
+dict2[i] = v
+len1 = len(str1)
+for x in range(len1-1,-1,-1):
+str2 += dict2[x]
+print(str2)
+
+list1 = [1,2,3,4,5]
+list2 = [3,4,7,8,9]
+dict1 ={}
+identical = []
+different = []
+
+def dictadd(lis:list):
+for i in lis:
+dict1[i] = dict1.get(i,0) + 1
+
+dictadd(list1)
+dictadd(list2)
+
+for k,v in dict1.items():
+if v > 1:
+identical.append(k)
+else:
+different.append(k)
+
+print('相同元素有 {}'.format(identical))
+print('不同元素有 {}'.format(different))
+
+identical = []
+different = []
+
+for x in list1:
+if x in list2:
+identical.append(x)
+else:
+different.append(x)
+
+for y in list2:
+if y not in list1:
+different.append(y)
+
+print('相同元素有 {}'.format(identical))
+print('不同元素有 {}'.format(different))

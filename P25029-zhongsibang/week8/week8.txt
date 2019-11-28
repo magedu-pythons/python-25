@@ -1,0 +1,44 @@
+﻿#1、实现一个函数用于判断字符串str2是否是str1的子串。如果是，则该函数返回str2在str1中首次出 现的地址；否则，返回None。
+
+def strinclud(x:str,y:str):
+    result = []
+    if len(x)>len(y):
+        return "{} \n IS NOT IN \n {}".format(x,y)
+    else:
+        lenx = len(x)
+        leny = len(y)
+        retry = leny - lenx + 1 
+        #print(retry)
+        for i in range(retry):
+            if x == y[i:i+lenx]:
+                result.append(i)
+        return (len(result),result) if len(result)!=0  else "{} \n IS NOT IN \n {}".format(x,y)
+                
+    
+    
+str1 = 'abcd'
+str2 = 'viojwff    abcd    34f23abcd2f34ft34'
+
+strinclud(str1,str2)
+
+
+
+
+
+#2、给定一个整型列表，请实现从其中找出2个数的和为某一个指定的值？
+#如：lst =[1,5,2,7,4,9]，指定的目标值为11，可以从中找出 2和9之和为11
+
+lst = [1,5,2,7,4,9]
+
+def findsum(lst:list,targetsum=None):
+    if targetsum==None:
+        return None
+    ret=[]
+    length = len(lst)
+    for i in range(length-1):
+        for j in range(i+1,length):
+            if lst[i]+lst[j]==targetsum:
+                ret.append((i,j))
+    return ret #返回索引组成的二元组
+
+findsum(lst,11)

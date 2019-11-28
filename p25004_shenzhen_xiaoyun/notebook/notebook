@@ -1,0 +1,78 @@
+#函数
+##可变参数
+def calc(*numbers):
+    sum = 0
+    for n in numbers:
+        sum = sum + n * n
+    return sum
+
+calc(1,2,2)	
+
+##关键字参数
+def person(name ,age,**kw):
+    print('name:',name ,'age:',age,'other:',kw)
+
+person('jim',1,city='bj')
+
+extra={'city':"bj",'tel':'1311101111'}
+person('jim',10,**extra)
+
+##命名关键字参数
+def person(name, age, **kw):
+    if 'city' in kw:
+        # 有city参数
+        pass
+    if 'job' in kw:
+        # 有job参数
+        pass
+    print('name:', name, 'age:', age, 'other:', kw)
+
+##命名关键字参数，限制关键字参数名字
+def person(name,age,*,city,job):
+    print(name,age,city,job)
+
+person('jim',8,city='bj',job='dba')	
+
+##给了默认值就可以不传
+def person(name, age, *, city='Beijing', job):
+    print(name, age, city, job)
+	
+
+#list
+classmates = ['Michael', 'Bob', 'Tracy']	
+
+#tuple
+classmates = ('Michael', 'Bob', 'Tracy')
+
+#dict
+d = {'Michael': 95, 'Bob': 75, 'Tracy': 85}
+
+#set
+>>> s = set([1, 1, 2, 2, 3, 3])
+>>> s
+{1, 2, 3}
+
+#list 生成式
+L = [x * x for x in range(10)]
+
+#generator 生成器
+g = (x * x for x in range(10))
+
+#map函数
+def f(x):
+    return x*x
+r=map(f,[1,2,3,4,5])
+list(r)
+
+#reduce函数
+from functools import reduce
+def fn(x,y):
+    return x*10+y
+reduce(fn,[1,2,3,2,1])
+
+#匿名函数
+list(map(lambda x: x*x,[1,2,3,4,5]))
+
+
+#装饰器
+decorator
