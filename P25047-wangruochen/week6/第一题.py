@@ -1,0 +1,5 @@
+old_1 = (('a'),('b'))
+old_2 = (('c'),('d'))
+old = zip(old_1,old_2)
+new = list(map(lambda tup:{tup[0],tup[1]},old))
+print(new)
