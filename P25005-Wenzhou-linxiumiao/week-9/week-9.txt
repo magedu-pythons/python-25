@@ -56,3 +56,5 @@ different.append(y)
 
 print('相同元素有 {}'.format(identical))
 print('不同元素有 {}'.format(different))
+
+# 不错,循环,列表和集合的知识都掌握的不错,后面的学习过程中多加应用. 提交代码的时候别忘了代码格式要写好,注意缩进.
