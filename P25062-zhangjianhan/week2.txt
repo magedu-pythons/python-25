@@ -24,6 +24,8 @@ while index <= 101:
     a = b
     b = c
     index += 1
+    
+# 第二种方式可以使用迭代来做
 
 #使用 Python 实现随机生成 200 无重复激活码（或者优惠券），字符串长度大于5以上 
 import random
@@ -34,3 +36,5 @@ for i in range(200): #打印200张激活码
     for j in range(5) #长度5位
         activation_code += random.choice(s)
     print('P',i+1,':',activation_code)
+
+# 这里要求字符串长度大于5, 同时这里使用random的话,可能会存在重复的可能,这一点可以尝试再判断一下.
