@@ -32,3 +32,5 @@ def find_nums(x):
 
 s = find_nums(15)
 print(s)
+
+# 这里的lst是给定的,而不是自己构建的,如果是自己通过range来构建,那么基本上所有的数都能找到两个数之和.
