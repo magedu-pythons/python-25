@@ -67,3 +67,6 @@ print(c._lower())
 print(c._search())
 print(c._search('abc'))
 print(c._search('abccc'))
+
+# 类的概念,私有变量的概念都掌握的不错.问题在于,让你自己实现upper,lower,index这几个方法.
+# 结果在你的实现里还是调用的字符串自带的方法,实际上相当于没做, reverse和find做的不错.上面那三个可以再尝试一下.
