@@ -64,3 +64,5 @@ if __name__ == '__main__':
     print(a.upper())
     print(a.lower())
     print(a.find('2a'))
+
+# 不错,写的很好,基本的都考虑到了.
