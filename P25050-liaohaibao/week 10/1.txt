@@ -1,5 +1,5 @@
-# ��ʹ��ϵͳ�������Լ�ʵ��һ��string�࣬ʵ�ֻ������ַ�����תreverse��
-# ���� index����дupper��Сдlower������find�ȹ��ܡ�
+# 不使用系统函数，自己实现一个string类，实现基本的字符串翻转reverse，
+# 索引 index，大写upper，小写lower，查找find等功能。
 
 
 class string:
@@ -9,12 +9,12 @@ class string:
     def __repr__(self):
         return self.strvalue
 
-    # �ַ�����ת
+    # 字符串翻转
     def reverse(self):
         return self.strvalue[::-1]
         # return ''.join(reversed(self.strvalue))
 
-    #  ����
+    #  索引
     def index(self,k,start=0,end=0):
         end = end if end > 0 else len(self.strvalue)
         for i in range(start, end):
@@ -24,7 +24,7 @@ class string:
             return -1
         # return self.strvalue.index()
 
-    # ��д
+    # 大写
     def upper(self):
         newstr = ''
         for i in self.strvalue:
@@ -32,7 +32,7 @@ class string:
         return newstr;
         # return self.strvalue.upper()
 
-    # Сд
+    # 小写
     def lower(self):
         newstr = ''
         for i in self.strvalue:
@@ -40,7 +40,7 @@ class string:
         return newstr;
         # return self.strvalue.lower()
 
-    # ����
+    # 查找
     def find(self,k,start=0,end=0):
         end = end if end > 0 else len(self.strvalue)
         for i in range(start,end):
@@ -58,3 +58,6 @@ print('index :{}'.format(strcls.index('45E')))
 print('upper :{}'.format(strcls.upper()))
 print('lower :{}'.format(strcls.lower()))
 print('find :{}'.format(strcls.find('EF')))
+
+# 非常不错，基本的功能全部实现，三元操作符也掌握的很好。让同学们自己实现的目的，是让同学们更深入地理解
+# 这些基本数据结构的功能，为后面类相关的知识打下基础。
