@@ -1,0 +1,49 @@
+#1、请将 "1,2,3"，变成 ["1","2","3"]
+
+str = "1,2,3"
+
+str.split(',')
+
+
+
+
+
+
+
+#2、使用Python copy一个文件，从a目录,copy文件到b目录
+from pathlib import Path
+
+def copy3(src_file:str,dst_file:str=None):
+    src_file_p = Path(src_file)
+    if dst_file==None:
+        dst_file_p = src_file_p.parent / (src_file_p.stem + '_copy' + src_file_p.suffix) 
+
+
+    with src_file_p.open() as src:
+        with dst_file_p.open('w') as dst:
+            for line in src:
+                dst.write(line)
+        
+copy3('/home/python/zhongsb/projects/web/a.sh')
+
+
+
+
+
+
+
+#3、以下代码输出什么，请解释原因(写到问题下方):
+li = [ [ ] ] * 5
+li[0].append(10)
+print(li)
+li[1].append(20)
+print(li)
+li.append(30)
+print(li) 
+
+#列表为引用类型，实际存放的是相同的空列表，引用同一位置内存地址，所以改动一处会全部改动
+#如需这样定义可以使用  li = [ [] for i in range(5)]
+
+
+
+

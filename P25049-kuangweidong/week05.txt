@@ -1,0 +1,30 @@
+1、打乱一个排好序的list对象alist，alist=[1,2,3,4,5]
+import random
+alist=[1,2,3,4,5]
+print(random.shuffle(alist))#print返回为none
+print(alist)
+
+2、已知仓库中有若干商品，以及相应库存，类似：
+袜子，10
+鞋子，20
+拖鞋，30
+项链，40
+要求随机返回一种商品，要求商品被返回的概率与其库存成正比。请描述实现的思路或者直接写一个实现的函数 
+
+dict={'wazi':10,'xiezi':20,'tuoxie':30,'xianlian':40}
+lst=dict.keys()
+print(lst)
+
+sum=0
+for x in dict.values():#遍历
+	sum=sum+x
+print(sum)
+
+dict1={'wazi':dict.get('wazi')/sum,'xiezi':dict.get('xiezi')/sum,'tuoxie':dict.get('tuoxie')/sum,'xianlian':dict.get('xianlian')/sum}
+print(dict1)#{'wazi': 0.1, 'xiezi': 0.2, 'tuoxie': 0.3, 'xianlian': 0.4}
+#如上生成一个新字典，商品和其概率
+
+问题：：如何将其按其概率输出？
+
+
+# 这里还是应该是random模块里的函数,可以先去使用random+概率关键字搜索一下对应模块的信息.

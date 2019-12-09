@@ -1,0 +1,10 @@
+# 2、使用Python copy一个文件，从a目录,copy文件到b目录
+import shutil
+import os
+src = "d:/a/a.txt"
+dst = "d:/b/b.txt"
+path = "d:/b"
+
+if not os.path.exists(path):
+    os.makedirs(path)
+shutil.copyfile(src,dst)

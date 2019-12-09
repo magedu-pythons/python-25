@@ -1,0 +1,12 @@
+r = input("ÇëÊäÈëÒ»¸ö×ÖÄ¸")
+string = "abcdefg"
+lst = []
+for i in string:
+    lst.append(i)
+if r in lst:
+    print("right")
+else:
+    print("false")
+    
+# 这里find的意思是, 能够在一个长字符串中找到一个短字符串的位置,并返回对应的索引,没找到的时候返回-1
+# 同学可以再尝试一下.

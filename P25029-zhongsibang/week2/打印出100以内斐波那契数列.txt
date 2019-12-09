@@ -1,0 +1,28 @@
+#打印出100以内斐波那契数列
+#方法一
+a = 0   
+b = 1   #第0项
+count = 1   #计数
+n = 0   #第n项的值
+while True:
+    n = a + b
+    if n>=100:
+        break
+    print(count,'\t',n)
+    a = b
+    b = n
+    count += 1  
+
+
+
+
+#打印出100以内斐波那契数列
+#方法二
+lst = [0,1,2]
+count=2
+while True:
+    if int(lst[-1])+int(lst[-2])>=100:
+        break
+    else:
+        lst.append(int(lst[-1])+int(lst[-2]))
+print(lst)

@@ -5,3 +5,11 @@ test.*
 .idea/
 __pycache__/
 *.py[cod]
+
+# ignore vim backup files
+*.swp
+*~
+
+# ignore backup files
+*[._]bak
+*[._]backup

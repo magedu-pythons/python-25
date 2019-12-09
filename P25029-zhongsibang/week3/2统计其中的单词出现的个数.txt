@@ -1,0 +1,50 @@
+#任一个英文的纯文本文件，统计其中的单词出现的个数。
+
+
+
+#方法一
+text1 = ''' 
+width is a decimal integer defining the minimum field width. If not specified, then the field width will be determined by the content.
+
+When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='.
+
+The precision is a decimal number indicating how many digits should be displayed after the decimal point for a floating point value formatted with 'f' and 'F', or before and after the decimal point for a floating point value formatted with 'g' or 'G'. For non-number types the field indicates the maximum field size - in other words, how many characters will be used from the field content. The precision is not allowed for integer values.
+
+Finally, the type determines how the data should be presented.
+'''
+
+text2=text1.lower()
+
+text2.count('the')
+
+
+
+#方法二,统计每个单词出现次数
+#任一个英文的纯文本文件，统计其中的单词出现的个数。
+
+text1 = ''' 
+width is a decimal integer defining the minimum field width. If not specified, then the field width will be determined by the content.
+
+When no explicit alignment is given, preceding the width field by a zero ('0') character enables sign-aware zero-padding for numeric types. This is equivalent to a fill character of '0' with an alignment type of '='.
+
+The precision is a decimal number indicating how many digits should be displayed after the decimal point for a floating point value formatted with 'f' and 'F', or before and after the decimal point for a floating point value formatted with 'g' or 'G'. For non-number types the field indicates the maximum field size - in other words, how many characters will be used from the field content. The precision is not allowed for integer values.
+
+Finally, the type determines how the data should be presented.
+'''
+
+text2=text1.lower()
+lst = text2.split()
+count = []
+count.append([0,1])
+count[0][0]=lst[0]
+
+for i in range(1,len(lst)):
+    for j in range(len(count)):
+        if lst[i]==count[j][0]:
+            count[j][1] += 1
+            break
+    else:
+        count.append([0,1])
+        count[-1][0]=lst[i]
+
+print(count)

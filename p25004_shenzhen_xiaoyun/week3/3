@@ -1,0 +1,15 @@
+#
+1、给出任意一个列表，请查找出x元素是否在列表里面，如果存在返回1，不存在返回0
+my_list=['jim','tom','bob','amy']
+x=input('input your name: ')
+y=0
+for i in range(len(my_list)):
+    if my_list[i]==x:
+        y=1
+        break
+print(y)
+
+2、任一个英文的纯文本文件，统计其中的单词出现的个数。
+
+
+

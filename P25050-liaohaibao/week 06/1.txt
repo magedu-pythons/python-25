@@ -1,0 +1,13 @@
+# 1、# 现有两元祖 (('a'),('b')),(('c'),('d')) ,请使用Python中的匿名函数生成列表 [ {'a':'c'｝,{'b':'d'}]
+tup1 = (('a'),('b'))
+tup2 = (('c'),('d'))
+# 方法一
+tup3 = zip(tup1,tup2)
+lis = []
+for i in tup3:
+    lis.append({i[0]:i[1]})
+print(lis)
+
+#方法二
+lis = list(map(lambda i:{i[0]:i[1]},zip(tup1,tup2)));
+print(lis)
