@@ -1,0 +1,36 @@
+# 自己实现python自带的map、zip和filter函数
+class MyFunction:
+    @staticmethod
+    def map(fn,iter):
+        newlst = []
+        for i in iter:
+            newlst.append(fn(i))
+        return newlst
+
+    @staticmethod
+    def zip(iter):
+        newlst = []
+        lenmin = None
+        for i in iter:
+            lenmin = len(i) if lenmin == None or len(i) < lenmin else lenmin
+        for i in range(lenmin):
+            newlst.append(tuple(list(iter)[x][i] for x in range(len(iter))))
+        return newlst
+
+    @staticmethod
+    def filter(fn,iter):
+        newlst = []
+        for i in iter:
+            v = fn(i)
+            if v:
+                newlst.append(v)
+        return newlst
+
+print('my  map: ',MyFunction.map(lambda x:x+5,[1,2,3,4,5]))
+print('std map: ',list(map(lambda x:x+5,[1,2,3,4,5])))
+print('----------------------')
+print('my  zip: ',MyFunction.zip(([1,2,3,4],['a','b','c'],[7,8,9])))
+print('std zip: ',list(zip([1,2,3,4],['a','b','c'],[7,8,9])))
+print('----------------------')
+print('my  filter: ',MyFunction.filter(lambda x: x if x % 2 == 0 else None,[1,2,3,4,5,6,7]))
+print('std filter: ',list(filter(lambda x: x % 2 == 0,[1,2,3,4,5,6,7])))
