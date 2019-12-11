@@ -23,6 +23,7 @@ def map1(fn,*iterable):
     for arg in lst:
         yield fn(*arg)
 
+#测试map1
 g = map1(lambda x, y: x + y,[1,2,3],[5,6,7])
 print(next(g))
 
@@ -43,7 +44,8 @@ def zip1(*iterable):
             t += (iterable[j][i],)
         yield t
 
-print(zip1([1,2,3],['a','b']))
+#测试zip1
+print(next(zip1([1,2,3],['a','b'])))
 
 #filter函数
 def filter1(fn,iterable):
@@ -51,6 +53,7 @@ def filter1(fn,iterable):
         if fn(it):
             yield it
 
+#测试filter1
 f1 = filter1(lambda x:x%2,[1,2,3,4,5,6,7,8])
 print(next(f1))
 
