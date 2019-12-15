@@ -1,8 +1,11 @@
+from inspect import isfunction
+
+
 def my_fun(*args, **kwargs):
     """ 自己实现python自带的map、zip和filter函数
 
     :param args: 位置参数，第一个为调用函数名称，接收一个str类型，
-                在调用map函数时:第二个是待转换类型。
+                在调用map函数时:第二个是待转换类型。该参数同时接受函数类型参数。
 
                 在调用zip函数时:从第二个参数开始为可迭代对象。
                 在最短的迭代对象迭代完成后停止，此时若继续调用next抛出StopIteration，函数返回值为一个生成器对象。
@@ -24,10 +27,11 @@ def my_fun(*args, **kwargs):
         :return:生成器对象
         """
         _args = {int, str, tuple, set}
-        if _type in _args:
+        # 调用者为函数,或者为上述声明类型中的一种类型转换
+        if _type in _args or isfunction(_type):
             _ret = (_type(i) for i in _iter)
         else:
-            raise NameError('name '+_type+' is not defined')
+            raise TypeError("got type error:",_type)
 
         return _ret
 
@@ -89,6 +93,10 @@ if __name__ == "__main__":
     # 测试用例
     # map
     my_fun__map = my_fun('map', int, iters=[1,3,4])
+    print(my_fun__map)
+    for i in my_fun__map:
+        print(i)
+    my_fun__map = my_fun('map', lambda x:x**2, iters=[1,3,4])
     print(my_fun__map)
     for i in my_fun__map:
         print(i)
