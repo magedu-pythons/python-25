@@ -13,6 +13,7 @@ def fun1(tmp):
 
 def fun2(tmp):
     return ''.join(map(str,[i for i in reversed(tmp)]))
+# 这里可以直接使用join函数将reversed()返回的生成器拼接起来即可.
 
 def fun3(tmp):
     tmp = [i for i in tmp]
@@ -78,3 +79,5 @@ def fun2(lst1,lst2):
 
 print(fun1(list1,list2))
 print(fun2(list1,list2))
+
+# 不错,集合和集合解析式都用的很好,后面也可以继续,在学习到新的知识以后,再尝试迭代.
