@@ -1,0 +1,42 @@
+1、实现一个函数用于判断字符串str2是否是str1的子串。如果是，则该函数返回str2在str1中首次出 现的地址；否则，返回None。
+
+
+s1='abcd'
+s2='defabcdabo'
+
+def findit(str1: str, str2: str):
+    count=0
+    if len(str2) < len(str1):
+        str1, str2 = str2, str1  # 假设str1最短，如果不是，则交换两边的内容
+    length=len(str1)
+
+    for sublen in range(length,0,-1):#这里控制的是子串，拿来测试的,从最长的情形开始匹配
+        for start in range(0,length-sublen+1):
+            substr=str1[start:start+sublen]#first [0:3],在str1中切子串
+            if str2.find(substr) >-1:
+                return print(str2.find(substr))
+
+print(findit(s1,s2))
+
+2、给定一个整型列表，请实现从其中找出2个数的和为某一个指定的值？
+如：lst =[1,5,2,7,4,9]，指定的目标值为11，可以从中找出 2和9之和为11
+
+
+lst=[1,5,2,7,4,9]
+
+key = int(input('>>>>'))
+
+for i in range(len(lst)):
+    #print(lst[i])
+    a=key-lst[i]
+    if (a in lst) is True:
+        print('{}+{}={}'.format(a,key,lst[i]))
+
+
+
+
+
+
+
+
+
