@@ -1,0 +1,23 @@
+本周作业：实现一个timeit的装饰器：timeit 装饰能够计算被装饰函数的运行时间
+
+
+
+import datetime
+import time
+def timeit(fn):
+    def inner(*args,**kwargs):
+        start = datetime.datetime.now ()
+        print("call function{}. add x={},y={}".format(fn.__name__,*args))
+        ret=fn(*args,**kwargs)#参数解构#fn记住了原来的add，所以最后内层的fn还是原add
+        delta = (datetime.datetime.now () - start).total_seconds ()
+        print ('Function {} took {}s'.format (fn.__name__, delta))
+        return ret
+    return inner
+
+@timeit#装饰器加在被装饰的函数前面  add=logger(add)=> 新右边的add就是inner，
+def add(x,y):
+    time.sleep(1)
+    return x+y
+
+ret=add(4,5)
+print(ret)

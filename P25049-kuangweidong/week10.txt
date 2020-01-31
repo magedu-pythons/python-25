@@ -1,0 +1,64 @@
+不使用系统函数，自己实现一个string类，实现基本的字符串翻转reverse，索引 index，大写upper，小写lower，查找find等功能。
+
+#首先用string已经学过的知识老完成
+str1='Jack is a good man'
+print(str1[::-1])
+print(str1.lower())#转成小写字母
+print(str1.upper())#转成大写字母
+print(str1.find('is'))
+print('-'*30)
+
+#再自己定义函数
+# s= 'Jack is a good man'
+# def reversestring(s):
+#     result = ""
+#     length = len(s)-1
+#     for i,value in enumerate(s):
+#         result += s[length-i]
+#     return result
+# result = reversestring(s)
+# print(result)
+
+#转大写
+s= 'Jack is a good man'
+def upperstring(s):
+    newstring=''
+    for i in s:
+        if i>='a' and i<='z':
+            newstring+=chr(ord(i)-32)
+        else:
+            newstring+=i
+    return newstring
+print(upperstring(s))
+
+#转小写
+str2= 'Jack is a GOOD man'
+def lowerstring(s):
+    newstring=''
+    for i in s:
+        if i>='A' and i<='Z':
+            newstring+=chr(ord(i)+32)
+        else:
+            newstring+=i
+    return newstring
+print(lowerstring(str2))
+
+print('='*30)
+s1='abcd'
+s2='defabcdabo'
+
+def findit(str1, str2):
+    count=0
+    if len(str2) < len(str1):
+        str1, str2 = str2, str1  # 假设str1最短，如果不是，则交换两边的内容
+    length=len(str1)
+
+    for sublen in range(length,0,-1):#这里控制的是子串，拿来测试的,从最长的情形开始匹配
+        for start in range(0,length-sublen+1):
+            substr=str1[start:start+sublen]#first [0:3],在str1中切子串
+            if str2.find(substr) >-1:#如果包含子字符串返回开始的索引值，否则返回-1。
+                return '字符串中是否包含子字符串 str'
+
+print(findit(s1,s2))
+
+

@@ -1,0 +1,24 @@
+# 实现一个timeit的装饰器：timeit 装饰能够计算被装饰函数的运行时间
+import datetime
+import time
+
+def timeit(_fn):
+    def fn(*args,**kwargs):
+        t1 = datetime.datetime.now()
+        print('t1= {}'.format(t1))
+
+        f = _fn(*args,**kwargs)
+
+        t2 = datetime.datetime.now()
+        print('t2= {}'.format(t2))
+
+        print('dif= {}'.format(t2 - t1))
+        return f
+    return fn
+
+@timeit
+def calc(value:int):
+    for i in range(value):
+        time.sleep(0.66)
+
+calc(5)
