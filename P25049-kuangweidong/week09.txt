@@ -1,0 +1,53 @@
+1. 字符串 str= 'reverse this string'， 请使用三种方法翻转字符串。
+
+1、
+str= 'reverse this string'
+str1=(str).split(' ')#['reverse', 'this', 'string']
+print(str1[::-1])
+
+2、
+str= 'reverse this string'
+
+l = list(str)
+l.reverse()
+print("".join(l))
+
+3、
+s= 'reverse this string'
+def func(s):
+    result = ""
+    length = len(s)-1
+    for i,value in enumerate(s):
+        result += s[length-i]
+    return result
+result = func(s)
+print(result)
+
+
+
+
+2. 给出两个列表list1 = [1, 2, 3, 4, 5], list2=[3,4,7,8,9]，找出列表中相同和不同的元素，使用两种（包含两种）以上方法实现。
+
+方法一
+list1 = [1, 2, 3, 4, 5]
+list2=[3,4,7,8,9]
+list_equel=[]
+list_diff=[]
+for i in range(len(list1)):
+    for j in range(len(list2)):
+        if list1[i]==list2[j] :
+            list_equel.append(list1[i])
+        else:
+            list_diff.append(list1[i])
+            list_diff.append (list2[i])
+s=set(list_diff)#去重
+print('list_equel:',list_equel)
+print('list_diff:',s)#以元组方式输出
+
+方法二
+list1 = [1, 2, 3, 4, 5]
+list2=[3,4,7,8,9]
+a=set(list1)
+b=set(list2)
+print(set(a)&set(b))#打印ab中相同元素
+print(set(a)^set(b))#打印ab中不相同元素
