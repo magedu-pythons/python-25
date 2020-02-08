@@ -15,6 +15,9 @@ def myzip(*iterables):
             lst.append(elem)
 
         yield tuple(lst)
+		
+		
+		
 
 # 调用示例
 n = myzip('123', 'ABCDE')

@@ -8,6 +8,7 @@ def myfilter(func, iterable):
             yield c
 
 
+
 # 调用示例
 g = myfilter(lambda x: x > 3, (1, 2, 3, 5, 6))
 print(list(g))
