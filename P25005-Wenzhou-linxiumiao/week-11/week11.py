@@ -76,3 +76,6 @@ def try_filter(f,args):
 print(try_filter(add1,list1))
 for i in try_filter(add1,list1):
     print(i)
+    
+# 测试代码都可以通过，可以尝试在代码里尝试添加一些异常处理的情况
+# 因为你这里的测试代码都是你考虑的正常情况，有时候需要故意去考虑一些异常情况来测试代码，完善代码的功能。 
