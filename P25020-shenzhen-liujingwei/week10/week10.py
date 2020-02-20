@@ -40,3 +40,5 @@ print(s[2])
 print(s.up())
 print(s.lw())
 print(s.findS('d'))
+
+# 存在的问题是，如果用户传进来的时候不是字符串，这个时候怎么处理？
