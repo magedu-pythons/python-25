@@ -96,3 +96,5 @@ class Grade:
 g = Grade(USER_FILE,GRADE_FILE)
 g.run()
 #g.auth()
+
+# 功能实现的很好，就是后面测试的时候，尽量把你的数据文件也传上来，这样更方便测试
