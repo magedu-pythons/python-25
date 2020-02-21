@@ -1,4 +1,4 @@
-# ʵ��һ��timeit��װ������timeit װ���ܹ����㱻װ�κ���������ʱ��
+# 实现一个timeit的装饰器：timeit 装饰能够计算被装饰函数的运行时间
 import datetime
 import time
 
@@ -22,3 +22,5 @@ def calc(value:int):
         time.sleep(0.66)
 
 calc(5)
+
+# 简洁明了，基础掌握的很扎实。后面生产环境中，装饰器应用的比较多，这块的内容建议多消化吸收，掌握牢固。
