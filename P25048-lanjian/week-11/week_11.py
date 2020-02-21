@@ -39,6 +39,8 @@ def my_map(function, *iterable, **kwiterable):
 
     return result
 
+# 只考虑了function是None的状态，但是function在这种定义格式下还可以是任何类型。因此None类型和其他类型一样
+# 都可以让系统自己去抛出异常，或者说你自己定义对应的异常机制来处理，这样只处理单个异常不如不处理。
 
 # 自定义zip函数
 def my_zip(*iterable):
@@ -61,6 +63,7 @@ def my_zip(*iterable):
 
     return result
 
+# zip函数实现的很好
 
 # 自定义filter函数
 def my_filter(function, iterable):
@@ -72,3 +75,4 @@ def my_filter(function, iterable):
         else:  # 不是函数，则取非空元素
             if x:
                 yield x
+# 当function不是函数的时候，应该直接报错function不是一个可调用对象。而不是返回。                
