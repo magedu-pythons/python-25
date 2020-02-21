@@ -1,4 +1,4 @@
-# �Լ�ʵ��python�Դ���map��zip��filter����
+# 自己实现python自带的map、zip和filter函数
 class MyFunction:
     @staticmethod
     def map(fn,iter):
@@ -36,3 +36,5 @@ print('std zip: ',list(zip([1,2,3,4],['a','b','c'],[7,8,9])))
 print('----------------------')
 print('my  filter: ',MyFunction.filter(lambda x: x if x % 2 == 0 else None,[1,2,3,4,5,6,7]))
 print('std filter: ',list(filter(lambda x: x % 2 == 0,[1,2,3,4,5,6,7])))
+
+# 实现的很好，基本功能都可以正常运行。建议在代码里加上适当的注释，方便复习的时候自己来会看。
