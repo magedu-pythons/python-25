@@ -53,3 +53,5 @@ def test(x: int, y: int, *args: int, z: int, w: int = 30, **kwargs: int) -> int:
 
 # print(test.__doc__)
 print(test(1, 2, 3, 4, 5, 6, z=7, a=8, b=9, c=10))
+
+# 实现的很好，装饰器在后面生产上使用的很广泛，建议多尝试，多使用。
