@@ -11,3 +11,5 @@ def mymap(func, iter):
 g = (mymap(str, [1, 2]))
 print(next(g))
 print(next(g))
+
+# 实现的很好，非常简洁明了。
