@@ -6,6 +6,7 @@ import time
 import functools
 
 
+# timeit装饰器
 def timeit(fn):
     @functools.wraps(fn)
     def wrapper(*args, **kwargs):
