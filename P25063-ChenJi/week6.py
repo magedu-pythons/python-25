@@ -12,3 +12,5 @@ sentence = 'How are you? Fine, thank you. And you?'
 words = sentence.split(" ")
 words.reverse()
 print(" ".join(words))
+
+# 第一个作业完成的很好，第二个作业看一下代码里执行结果中符号的位置。题目要求单词顺序变化，你这里符号和单词一起变了。
