@@ -32,3 +32,5 @@ while len(codes) < 200:
     codes.add("".join(random.choices(asc, k=10)))
 print(codes, len(codes))
 
+# 两种方法都实现的比较好，第二个作业的代码可以尝试改成函数来实现。
+# 将优惠券的字符类型以及优惠券长度当作函数参数。
